@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE engineconfig SYSTEM "engineconfig.dtd">
+<engineconfig>
+  <buffer_reserve>3</buffer_reserve>
+  <file_size>500</file_size>
+  <get_threshold>20</get_threshold>
+  <ignored_future>1</ignored_future>
+  <max_repeat_count>120</max_repeat_count>
+  <write_period>30</write_period>
+  {%- for group in groups %}
+  <group>
+    <name>{{ group.name }}</name>
+    {%- for channel in group.channels %}
+    <channel>
+      <name>{{ channel.name }}</name>
+      <{{ channel.type }}/>
+      <period>{{ channel.period }}</period>
+    </channel>
+    {%- endfor %}
+  </group>
+  {%- endfor %}
+</engineconfig>

@@ -1,0 +1,2 @@
+{prefix}:FOO monitor 1
+{prefix}:BAR scan 60
