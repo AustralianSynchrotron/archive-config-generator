@@ -13,6 +13,7 @@ Usage
 -----
 
 Define a text file where each line contains:
+
 * the PV name
 * the monitor type (`scan` or `monitor`)
 * the scan period / expected monitor update period
@@ -32,7 +33,9 @@ Then run::
                              --substitutions prefix=MTR01,slow=3600 example.txt
 
 The ouput, which should be stored as `engineconfig.xml` on your archiver host
-will look like::
+will look like:
+
+.. code:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
     <!DOCTYPE engineconfig SYSTEM "engineconfig.dtd">
