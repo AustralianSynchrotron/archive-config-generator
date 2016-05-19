@@ -1,0 +1,5 @@
+SR03ID01:FLUX_MONITOR       monitor   1
+SR03ID01:PRESSURE_MONITOR   scan      60
+# comments and blank lines are ignored
+# placeholder labels can be added in parentheses:
+{prefix}:SETPOINT           scan      {slow}

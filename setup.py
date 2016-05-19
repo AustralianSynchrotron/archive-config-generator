@@ -7,6 +7,10 @@ with open('archiveconfig/__init__.py') as file:
 setup(
     name='archiveconfig',
     version=version,
+    maintainer='Robbie Clarken',
+    maintainer_email='robbie.clarken@synchrotron.org.au',
+    url='https://github.com/AustralianSynchrotron/archive-config-generator',
+    license='MIT',
     packages=['archiveconfig'],
     install_requires=['click', 'jinja2'],
     entry_points={

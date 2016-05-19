@@ -8,6 +8,13 @@ def test_parse_line():
     assert channel.period == '1'
 
 
+def test_parse_line_with_multiple_spaces():
+    channel = parse_line('SR03BM01:FOO    scan       1')
+    assert channel.name == 'SR03BM01:FOO'
+    assert channel.type == 'scan'
+    assert channel.period == '1'
+
+
 def test_parse_line_returns_none_on_blank_lines():
     assert parse_line('') is None
     assert parse_line('  ') is None
