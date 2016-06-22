@@ -15,7 +15,7 @@ Usage
 Define a text file where each line contains:
 
 * the PV name
-* the monitor type (`scan` or `monitor`)
+* the monitor type (``scan`` or ``monitor``)
 * the scan period / expected monitor update period
 
 For example::
