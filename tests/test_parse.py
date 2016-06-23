@@ -1,4 +1,4 @@
-from archiveconfig.parse import parse_line, parse_file, Channel
+from archiveconfig.parse import parse_line, parse_file
 
 
 def test_parse_line():

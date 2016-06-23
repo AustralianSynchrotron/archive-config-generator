@@ -1,4 +1,7 @@
+from __future__ import print_function
+
 import click
+
 from .parse import parse_file
 from .render import render_template
 
