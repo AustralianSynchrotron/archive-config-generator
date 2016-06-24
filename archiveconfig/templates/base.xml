@@ -13,8 +13,8 @@
     {%- for channel in group.channels %}
     <channel>
       <name>{{ channel.name }}</name>
-      <{{ channel.type }}/>
       <period>{{ channel.period }}</period>
+      <{{ channel.type }}/>
     </channel>
     {%- endfor %}
   </group>
