@@ -12,7 +12,8 @@ def test_render_template():
             Channel('CHANNEL_B', 'scan', '1.0'),
         ]
     }]
-    output = render_template(groups=groups)
+    output = render_template(dtd='/path/to/engineconfig.dtd', groups=groups)
+    assert '/path/to/engineconfig.dtd' in output
     tree = ElementTree.fromstring(output)
     assert tree.find('./group/name').text == 'SR03ID01'
     ch1, ch2 = tree.findall('./group/channel')

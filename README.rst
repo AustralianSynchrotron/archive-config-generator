@@ -29,7 +29,8 @@ For example::
 
 Then run::
 
-    archive-config-generator --group-name MyArchive \
+    archive-config-generator --dtd-path /asp/arc/engineconfig.dtd \
+                             --group-name MyArchive \
                              --substitutions prefix=MTR01,slow=3600 example.txt
 
 The ouput, which should be stored as `engineconfig.xml` on your archiver host
@@ -38,7 +39,7 @@ will look like:
 .. code:: xml
 
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-    <!DOCTYPE engineconfig SYSTEM "engineconfig.dtd">
+    <!DOCTYPE engineconfig SYSTEM "/asp/arc/engineconfig.dtd">
     <engineconfig>
       <buffer_reserve>3</buffer_reserve>
       <file_size>500</file_size>
